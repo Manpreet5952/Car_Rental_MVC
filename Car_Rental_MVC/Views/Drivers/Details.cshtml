@@ -1,0 +1,30 @@
+﻿@model Car_Rental_MVC.Models.Driver
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Driver</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DriverName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DriverName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Car.CarRegNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Car.CarRegNo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+</div>

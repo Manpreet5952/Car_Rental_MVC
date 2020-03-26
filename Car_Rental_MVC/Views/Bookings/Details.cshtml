@@ -1,0 +1,36 @@
+﻿@model Car_Rental_MVC.Models.Booking
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Booking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Car.CarRegNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Car.CarRegNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.UserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfDays)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfDays)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model.BookingId">Edit</a> |
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+</div>
